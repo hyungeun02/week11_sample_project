@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-브라우저에 표시되는 Local UR L에 접속하세요. 빌드 테스트: `npm run build`.
+브라우저에 표시되는 Local URL에 접속하세요. 빌드 테스트: `npm run build`.
 
 ## 소스 구조
 
