@@ -6,6 +6,8 @@
 깃허브에서 fork 진행 후 클론을 하였습니다. 그리고 과제 레포지토리와 연결하였습니다.<br>
 그 후 npm install 과 npm run dev를 하여 실행하였습니다
 
+실행화면 : ![alt text](Week11.png)
+
 ## Source Code Exploration :
 CourseList.jsx : 과목의 목록을 관리하는 파일으로 과목을 추가하고 삭제하는 기능, 수강 여부를 보여주는 기능 등이 있습니다. 그리고 검색 기능을 추가하였습니다.
 
