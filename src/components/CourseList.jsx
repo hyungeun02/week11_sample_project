@@ -8,6 +8,7 @@ export default function CourseList() {
   const [newName, setNewName] = useState("");
 
   const [NextId, setNextId] = useState(6);
+  const [Search, setSearch] = useState("");
 
   // [제공] 삭제 기능: filter로 새 배열을 만들어 업데이트합니다.
   function handleDelete(id) {
@@ -91,6 +92,16 @@ export default function CourseList() {
             + Add Course
           </button>
         </form>
+
+        <div className="tools">
+          <input
+            className="input"
+            placeholder="검색할 과목을 입력하세요"
+            value={Search}
+            onChange={(event) => setSearch(event.target.value)}
+          />
+        </div>
+
         <div className="list-head">
           <span>COURSE</span>
           <span>CATEGORY</span>
@@ -99,14 +110,20 @@ export default function CourseList() {
         {courses.length === 0 && (
           <div className="empty">등록된 과목이 없습니다.</div>
         )}
-        {courses.map((course) => (
-          <CourseItem
-            key={course.id}
-            course={course}
-            onDelete={handleDelete}
-            onToggle={handleToggle}
-          />
-        ))}
+        {courses
+
+          .filter((course) =>
+            course.name.toLowerCase().includes(Search.toLowerCase()),
+          )
+
+          .map((course) => (
+            <CourseItem
+              key={course.id}
+              course={course}
+              onDelete={handleDelete}
+              onToggle={handleToggle}
+            />
+          ))}
       </section>
     </>
   );
