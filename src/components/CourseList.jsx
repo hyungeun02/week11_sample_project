@@ -78,7 +78,7 @@ export default function CourseList() {
           <span className="small-note">{courses.length} courses</span>
         </div>
         <p className="todo">
-          실습 과제: 아래 Add 버튼과 완료 체크박스의 기능을 직접 구현하세요.
+          실습 과제: 아래 Add 버튼과 완료 체크박스의 기능을 직접 구현하세요. 완료
         </p>
         <form className="add-form" onSubmit={handleAdd}>
           <input
